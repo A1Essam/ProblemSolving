@@ -3,6 +3,7 @@
 #include <sstream>
 #include <string>
 #include <vector>
+#include <algorithm>
 
 using namespace std;
 
@@ -12,13 +13,12 @@ int main()
 {
 
 
-    int sq ;
-    cin>>sq;
-    string colorseq="ROYGBIVGBIVGBIVGBIVGBIVGBIVGBIVGBIVGBIVGBIVGBIVGBIVGBIVGBIVGBIVGBIVGBIVGBIVGBIVGBIVGBIVGBIVGBIVGBIVGBIVGBIVGBIVGBIVGBIVGBIVGBIVGBIVGBIVGBIVGBIVGBIVGBIVGBIVGBIVGBIVGBIVGBIVGBIVGBIVGBIVGBIVGBIVGBIVGBIVGBIV";
-
-    for(int i = 0 ; i < sq;i++){
-        cout<<colorseq[i];
-    }
-
+    string num;
+    cin>>num;
+    cout<<num;
+    vector <char> vec (num.begin(),num.end());
+    reverse(vec.begin(),vec.end());
+    for(long long i = 0 ; i < vec.size();i++)
+    cout<<vec[i];
     return 0;
 }
